@@ -5,7 +5,7 @@ public class BasicHashTable<K, V> {
     private int size;
     private HashEntry[] data;
 
-    BasicHashTable(int tableSize) {
+    public BasicHashTable(int tableSize) {
         this.capacity = tableSize;
         this.data = new HashEntry[this.capacity];
         this.size = 0;
@@ -33,7 +33,7 @@ public class BasicHashTable<K, V> {
 
     private int calculateHash(K key) {
         int hash = key.hashCode() % this.capacity;
-        while (data[hash] != null && !data[hash].equals(key)) {
+        while (data[hash] != null && !data[hash].getKey().equals(key)) {
             hash = (hash + 1) % this.capacity;
         }
         return hash;
