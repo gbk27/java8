@@ -1,4 +1,4 @@
-import datastructure.BasicQueue;
+import datastructure.queue.BasicQueue;
 
 public class SnowbirdLiftApp {
     BasicQueue<Gad2Chair> gad2Lift = new BasicQueue<Gad2Chair>();

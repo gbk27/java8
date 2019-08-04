@@ -1,4 +1,4 @@
-import datastructure.BasicQueue;
+import datastructure.queue.BasicQueue;
 
 public class TestQueue {
     public static void main(String[] args) {

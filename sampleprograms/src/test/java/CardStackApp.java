@@ -1,4 +1,4 @@
-import datastructure.BasicStack;
+import datastructure.stack.BasicStack;
 
 public class CardStackApp {
     BasicStack<String> stack = new BasicStack<String>();

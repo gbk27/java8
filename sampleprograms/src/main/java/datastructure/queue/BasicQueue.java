@@ -1,4 +1,4 @@
-package datastructure;
+package datastructure.queue;
 
 public class BasicQueue<Y> {
     private Y[] data;
