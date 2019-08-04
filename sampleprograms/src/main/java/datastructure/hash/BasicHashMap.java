@@ -12,7 +12,7 @@ public class BasicHashMap<K, V> {
     If the map previously contained a mapping for the key, the old value will be replaced
      */
     public void put(K key, V value) {
-        int hash = key.hashCode() / SIZE;
+        int hash = key.hashCode() % SIZE;
         System.out.println("Key :" + key + ", key.hashCode : " + key.hashCode() + ", hash : " + hash);
         Entry entry = data[hash];
 
@@ -35,7 +35,7 @@ public class BasicHashMap<K, V> {
 
     // Return the Entry mapped to the key in the HashMap
     public Entry get(K key) {
-        int hash = key.hashCode() / SIZE;
+        int hash = key.hashCode() % SIZE;
         Entry entry = data[hash];
 
         //Bucket is identified by hashCode and traverse the bucket till element is not found
@@ -50,7 +50,7 @@ public class BasicHashMap<K, V> {
 
     //Return the Value mapped by the key in the HashMap
     public V getValue(K key){
-        int hash  = key.hashCode() / SIZE;
+        int hash  = key.hashCode() % SIZE;
         Entry entry = data[hash];
 
         while (entry != null){
