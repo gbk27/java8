@@ -50,6 +50,11 @@ Best Case - O(n log n) : appropriate for large data
 Space Required : O(n) : recursive algorithm the array space as well as the stack space must be considered.
 
 
+Naive Search Algorithm & Boyue Moore Harspool 
+---------------------------------------------
+To check
+
+
 
 
 
