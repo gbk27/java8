@@ -1,4 +1,4 @@
-package java8;
+package java8.lambda;
 
 public class RunnableLambda implements Runnable {
 
