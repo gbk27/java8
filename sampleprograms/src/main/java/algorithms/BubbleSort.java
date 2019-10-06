@@ -9,7 +9,7 @@ public class BubbleSort {
         doBubbleSort(num);
     }
 
-    private static void doBubbleSort(int[] nums) {
+    private static void doBubbleSort(int nums[]) {
         int size = nums.length;
         for (int n = 0; n < nums.length; n++) {
             for (int i = 0; i < size - 1; i++) {

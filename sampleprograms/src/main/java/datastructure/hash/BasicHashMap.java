@@ -2,7 +2,7 @@ package datastructure.hash;
 
 public class BasicHashMap<K, V> {
 
-    // fir better re-sizing is taken as 2^4;
+    // for better re-sizing it is taken as 2^4;
     final static int SIZE = 16;
 
     Entry[] data = new Entry[SIZE];

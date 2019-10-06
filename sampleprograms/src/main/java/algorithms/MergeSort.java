@@ -1,5 +1,6 @@
 package algorithms;
 
+// Divide and Conquer algorithm.... divide into each element which is sorted and repeatedly  merge all elements
 public class MergeSort {
     private int[] array;
     private int[] tempMergeArr;
