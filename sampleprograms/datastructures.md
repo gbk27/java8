@@ -51,6 +51,23 @@ https://howtodoinjava.com/data-structure/java-stack-implementation-array/
 
 
 
+HashMap: (https://javabypatel.blogspot.com/2015/10/what-is-load-factor-and-rehashing-in-hashmap.html)
+--------
+Default load factor of Hashmap is 0.75f (i.e 75% of current map size). 
+Default capacity of Hashmap is 2^4 = 16 buckets.
+
+ So, when to increase the hashmap size is decided by product of,
+    (initial capacity of hashmap * Load factor of hashmap).
+    initial capacity of hashmap * Load factor of hashmap =  16 * 0.75 = 12. 
+
+    HashMap m = new HashMap(int initialCapacity, float load Factor);
+  
+  Rehashing
+  Rehashing is the process of re-calculating the hashcode of already stored entries (Key-Value pairs), to move them to another bigger size hashmap when Load factor threshold is reached.
+  Rehashing is done to distribute items across the new length hashmap, so that get and put operation time complexity remains O(1).
+
+
+
 
 
 

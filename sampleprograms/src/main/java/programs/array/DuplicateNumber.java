@@ -1,7 +1,6 @@
-package programs;
+package programs.array;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class DuplicateNumber {

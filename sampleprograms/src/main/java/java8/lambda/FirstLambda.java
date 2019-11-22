@@ -3,7 +3,9 @@ package java8.lambda;
 import java.io.File;
 import java.io.FileFilter;
 
-public class FirstLambda implements FileFilter {
+public class
+
+FirstLambda implements FileFilter {
 
     //old way
     @Override

@@ -61,8 +61,8 @@ public void Function<T,R> {
 
 stream.reduce(identity element, binary operation)
 
-Binary Operator is a special BiFunction
-@FunctionalInterface
+Binary Operator is a specia
+
 public interface BiFunction<T,U,R> {
     R apply(T t, U u);
 }

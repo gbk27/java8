@@ -1,4 +1,4 @@
-package programs;
+package programs.strings;
 
 import java.util.Stack;
 
@@ -14,6 +14,14 @@ public class ReverseString {
         reverseString.reverseStringUsingLoop(str);
 
         System.out.println(reverseString.reverseStringUsingRecursive(str));
+
+        System.out.println("Palindrome : " + checkGivenStringPalindrome(str, reverseString.reverse));
+
+
+    }
+
+    private static boolean checkGivenStringPalindrome(String str, String reverseStringUsingRecursive) {
+        return str.equalsIgnoreCase(reverseStringUsingRecursive);
     }
 
     private static void reverseStringUsingStack(String str) {
