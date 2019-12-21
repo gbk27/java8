@@ -77,11 +77,11 @@ public class BasicLinkedList<X> {
         return node;
     }
 
-    public X get(int position) {
+        public X get(int position) {
 
-        if (first == null) {
-            throw new IllegalStateException("List is empty");
-        }
+            if (first == null) {
+                throw new IllegalStateException("List is empty");
+            }
 
         Node currentNode = first;
         for (int i = 1; i < size() && currentNode != null; i++) {
