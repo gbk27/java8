@@ -69,3 +69,7 @@ SELECT * FROM Employee WHERE sal =
         )
         
         
+       
+       
+ Test Queries : http://sqlfiddle.com/
+        
