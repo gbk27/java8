@@ -1,3 +1,5 @@
+DevOps
+-------
 * Explain the “Shift left to reduce failure” concept in DevOps?
 * Explain the architecture of Jenkins?
 * Explain IaaS, PaaS ?
@@ -9,7 +11,8 @@
 
 
 
-**** Docker ****
+Docker
+------
 1. virtualization vs containerization ?
 2. Explain Simple Dockerfile ?
 3. Docker Lifecycle ?
@@ -18,7 +21,8 @@
 While using docker service with multiple containers across different hosts, you come across the need to load balance the incoming traffic. Load balancing and HAProxy is basically used to balance the incoming traffic across different available(healthy) containers. If one container crashes, another container should automatically start running and the traffic should be re-routed to this new running container. Load balancing and HAProxy works around this concept.
 
 
-***** Jenkins****
+Jenkins
+--------
 
 What are the Scopes of Jenkins Credentials?
 Jenkins credentials can be of one of the two scopes - Global & System
