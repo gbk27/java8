@@ -8,6 +8,10 @@ DevOps
   * **Pre-receive hook:** This hook is invoked before the references are updated when commits are being pushed. This hook is useful in ensuring the scripts related to enforcing development policies are run.
   * **Update hook:** This hook triggers the script to run before any updates are actually made. This hook is called once for every commit which has been pushed to the repository.
   * **Post-receive hook:** This hook helps trigger the script after the updates or changes have been accepted by the destination repository. This hook is ideal for configuring deployment scripts, any continuous integration-based scripts or           email notifications process to the team, etc.
+ 
+ * Sort Arrya using BubbleSort
+ * ![image](https://github.com/gbk27/java8/assets/42496600/03b1eb4b-5e85-48a6-a183-7ff14921171d)
+
 
 
 
