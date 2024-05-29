@@ -1,6 +1,9 @@
 Explain the “Shift left to reduce failure” concept in DevOps?
+
 Explain the architecture of Jenkins?
+
 Explain IaaS, PaaS ?
+
 What is Blue/Green Deployment Pattern?
 
 
