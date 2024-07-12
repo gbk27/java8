@@ -4,11 +4,15 @@ In Java, aggregation represents a "has-a" relationship, where one class contains
 Example: A university "has" departments. Composition is a stronger relationship, where one class owns another class, and the owned class cannot exist independently
 
 **Composition**:
+
 class Engine {
-    // Engine-specific attributes and methods
+
+    // Car specific attributes and methods
+    
 }
 
 class Car {
+
     private final Engine carEngine;  // This signifies that Car "owns" Engine.
 
     Car() {
@@ -18,11 +22,14 @@ class Car {
 }
 
 **Aggregation**:
+
 class Department {
+
     // Department-specific attributes and methods
 }
 
 class University {
+
     private Department[] departments;  // University has departments, but doesn't exclusively "own" them.
 
     University(Department[] departments) {
