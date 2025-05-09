@@ -1,15 +1,17 @@
 
 * Is Python a compiled language or an interpreted language?
 
-  Compilation: When you write Python code and run it, the source code (.py files) is first compiled into an intermediate form called bytecode (.pyc files). This bytecode is a lower-level representation of your code, but it is still not directly machine code. It’s something that the Python Virtual Machine (PVM) can understand and execute.
+      Compilation: When you write Python code and run it, the source code (.py files) is first compiled
+      into an intermediate form called bytecode (.pyc files). This bytecode is a lower-level representation of your code,
+      but it is still not directly machine code. It’s something that the Python Virtual Machine (PVM) can understand and execute.
 
-  Interpretation: After Python code is compiled into bytecode, it is executed by the Python Virtual Machine (PVM), which is an interpreter. The PVM reads the bytecode and executes it line-by-line at runtime, which is why Python is considered an interpreted language in practice.
+      Interpretation: After Python code is compiled into bytecode, it is executed by the Python Virtual Machine (PVM), which is an interpreter. The PVM reads the 
+      bytecode and executes it line-by-line at runtime, which is why Python is considered an interpreted language in practice.
 
  * What is a lambda function?
-  
-    A lambda function is an anonymous function. This function can have any number of parameters but, can have just one statement.
 
-    In the example, we defined a lambda function(upper) to convert a string to its upper case using upper().
+        A lambda function is an anonymous function. This function can have any number of parameters but, can have just one statement.
+        In the example, we defined a lambda function(upper) to convert a string to its upper case using upper().
 
         s1 = 'GeeksforGeeks'
         s2 = lambda func: func.upper()
