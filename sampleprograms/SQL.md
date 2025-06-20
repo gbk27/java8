@@ -50,6 +50,7 @@ WHERE N-1 = (SELECT COUNT(*)
 
 
 3. nth highest salary :
+------------------------
 
 // 1st option
 SELECT sal FROM (
@@ -85,12 +86,14 @@ SELECT * FROM Employee WHERE sal =
         6	                    101
         7	                    102
 
-    * Write a query to find the total number of customers who have placed order more than 2 
-    SELECT customer_id, COUNT(order_id) AS num_orders
-    FROM orders
-    GROUP BY customer_id
-    HAVING COUNT(order_id) > 2;
+    * Write a query to find the total number of customers who have placed order more than 2
+            
+            SELECT customer_id, COUNT(order_id) AS num_orders
+            FROM orders
+            GROUP BY customer_id
+            HAVING COUNT(order_id) > 2;
 
     * Write a query to find how many orders each customers have places
-      SELECT count(order_id), customer_id FROM orders GROUP BY customer_id
+      
+          SELECT count(order_id), customer_id FROM orders GROUP BY customer_id
         
