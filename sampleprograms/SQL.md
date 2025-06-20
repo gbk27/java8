@@ -72,4 +72,24 @@ SELECT * FROM Employee WHERE sal =
        
        
  Test Queries : http://sqlfiddle.com/
+
+
+ 4. GroupBy & Having Clauses
+        order_id	        customer_id
+        1	                    101
+        2	                    102
+        3	                    101
+        4	                    103
+        5	                    102
+        6	                    101
+        7	                    102
+
+    * Write a query to find the total number of customers who have placed order more than 2 
+    SELECT customer_id, COUNT(order_id) AS num_orders
+    FROM orders
+    GROUP BY customer_id
+    HAVING COUNT(order_id) > 2;
+
+    * Write a query to find how many orders each customers have places
+      SELECT count(order_id), customer_id FROM orders GROUP BY customer_id
         
