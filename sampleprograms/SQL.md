@@ -51,7 +51,7 @@ WHERE N-1 = (SELECT COUNT(*)
 
 
 
-3. nth highest salary :
+  3. nth highest salary :
 ------------------------
 
 // 1st option
