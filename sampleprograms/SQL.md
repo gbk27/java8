@@ -75,6 +75,7 @@ SELECT * FROM Employee WHERE sal =
 
 
  4. GroupBy & Having Clauses
+    -----------------------
         order_id	        customer_id
         1	                    101
         2	                    102
