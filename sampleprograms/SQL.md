@@ -1,5 +1,6 @@
 
 1. Query to find missing number in ordered integers
+----------------------------------------------------
 
 create table sequence (
     id int not null primary key
@@ -24,6 +25,7 @@ https://www.xaprb.com/blog/2005/12/06/find-missing-numbers-in-a-sequence-with-sq
 
 
 2.  sub-query vs corealted subquery
+------------------------------------
 
 
 Technical difference between Normal Sub-query and Co-related sub-query are:
