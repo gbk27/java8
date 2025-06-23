@@ -1,0 +1,35 @@
+
+/**
+ * Update the code by implementing the following rules:
+ * - If an exception is thrown by s.execute() then call c.rollback() and propagate the exception, otherwise call c.commit()
+ * - In any circumstances, c.close() must be called before leaving the method process(Service s, Connection c)
+ */
+class MyClass {
+
+  /**
+   * Executes the service with the given connection.
+   */
+  void process(Service s, Connection c) {
+    // Implement me
+
+    
+    
+    
+  }
+
+}
+
+interface Service {
+
+  void execute() throws ServiceException;
+  void setConnection(Connection c);
+
+}
+
+interface Connection {
+
+  void commit();
+  void rollback();
+  void close();
+
+}
