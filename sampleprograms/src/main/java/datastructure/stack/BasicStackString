@@ -25,3 +25,16 @@ public class BasicStack<String> {
         return stackPointer;
     }
 
+ public boolean contains(String item) {
+        boolean isItemPresent = false;
+        for (int i = 0; i < stackPointer; i++) {
+            if (data[i].equals(item)) {
+                isItemPresent = true;
+                break;
+            }
+        }
+        return isItemPresent;
+    }
+
+}
+
