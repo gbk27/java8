@@ -1,3 +1,27 @@
-Public Class BasicStackString<String> {
+package datastructure.stack;
 
-}
+public class BasicStack<String> {
+
+    private String[] data;
+    private int stackPointer;
+
+    public BasicStack() {
+        data = new String[1000];
+        stackPointer = 0;
+    }
+
+    public void push(String item) {
+        data[stackPointer++] = item;
+    }
+
+    public String pop() {
+        if (stackPointer == 0) {
+            throw new IllegalArgumentException("No data found on stack");
+        }
+        return data[--stackPointer];
+    }
+
+    public int size() {
+        return stackPointer;
+    }
+
