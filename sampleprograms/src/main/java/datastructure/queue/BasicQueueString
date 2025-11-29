@@ -1,0 +1,70 @@
+package datastructure.queue;
+
+public class BasicQueue<String> {
+    private String[] data;
+    private int front;
+    private int end;
+
+    public BasicQueue() {
+        this(1000);
+    }
+
+    public BasicQueue(int size) {
+        data = new String[size];
+        front = -1;
+        end = -1;
+    }
+
+    public int size() {
+        if (front == -1 && end == -1) {
+            return 0;
+        }
+        return (end - front) + 1;
+    }
+
+    public void enQueue(String item) {
+        if ((end + 1) % data.length == front) {
+            throw new IllegalArgumentException("Queue is full");
+        } else if (size() == 0) {
+            front++;
+            end++;
+            data[end] = item;
+        } else {
+            end++;
+            data[end] = item;
+        }
+    }
+
+    public Y deQueue() {
+        String ele = null;
+        if (size() == 0) {
+            throw new IllegalStateException("Can't dequeue becasue not item found");
+        } else if (front == end) {
+            ele = data[front];
+            data[front] = null;
+            front = -1;
+            end = -1;
+        } else {
+            ele = data[front];
+            data[front] = null;
+            front++;
+        }
+        return ele;
+    }
+
+    public boolean contains(Y item) {
+        boolean isItemFound = false;
+        if(size() == 0){
+            return isItemFound;
+        }
+
+        for (int i = front; i < end; i++) {
+            if (data[i].equals(item)) {
+                isItemFound = true;
+                break;
+            }
+        }
+        return isItemFound;
+    }
+}
+}
