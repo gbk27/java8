@@ -24,6 +24,7 @@ start
 https://www.xaprb.com/blog/2005/12/06/find-missing-numbers-in-a-sequence-with-sql/
 
 * Using Lag Function
+  
 SELECT
     t.id
 FROM
