@@ -24,6 +24,20 @@ start
 https://www.xaprb.com/blog/2005/12/06/find-missing-numbers-in-a-sequence-with-sql/
 
 
+SELECT
+    t.id
+FROM
+    (
+        SELECT
+            id,
+            LAG(id, 1) OVER (ORDER BY id) AS previous_id
+        FROM
+            your_table
+    ) t
+WHERE
+    t.id - t.previous_id > 1;
+
+
 2.  sub-query vs corealted subquery
 ------------------------------------
 
