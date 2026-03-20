@@ -20,7 +20,6 @@ Snowflake schema: An extension of the star schema, the snowflake schema consists
 <img width="987" height="453" alt="image" src="https://github.com/user-attachments/assets/6c2f4475-884d-4abc-8fc2-3678c4ce5379" />
 
 
-Snowflake schema example. Image from guru99
 
 Galaxy schema: Also known as a fact constellation schema, it contains two or more fact tables that share dimension tables. This schema is suitable for complex database systems that require multiple fact tables.
 
