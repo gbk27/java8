@@ -71,18 +71,18 @@ Answer: RDD (Resilient Distributed Dataset) is the fundamental data structure in
 What is Data Skew in PySpark & how will you handle it ?
 -----------------------------------------------------
 Assuem there is 10m record dataset with data skew and how will you handle it
-from pyspark.sql.functions import col
-
-# Sample DataFrame with skewed data
-data = [(1, "A"), (1, "B"), (1, "C"), (2, "D"), (3, "E")]
-df_skewed = spark.createDataFrame(data, ["key", "value"])
-
-# Calculate distribution to detect skewness
-df_skewed.groupBy("key").count().orderBy(col("count").desc()).show()
-
-# Repartition by range to manage skewness
-df_balanced = df_skewed.repartitionByRange(3, "key")
-print(f"Partitioning after repartitionByRange: {df_balanced.rdd.glom().map(len).collect()}")data = [(1, "A"), (1, "B"), (1, "C"), (2, "D"), (3, "E")]
+    from pyspark.sql.functions import col
+    
+    # Sample DataFrame with skewed data
+    data = [(1, "A"), (1, "B"), (1, "C"), (2, "D"), (3, "E")]
+    df_skewed = spark.createDataFrame(data, ["key", "value"])
+    
+    # Calculate distribution to detect skewness
+    df_skewed.groupBy("key").count().orderBy(col("count").desc()).show()
+    
+    # Repartition by range to manage skewness
+    df_balanced = df_skewed.repartitionByRange(3, "key")
+    print(f"Partitioning after repartitionByRange: {df_balanced.rdd.glom().map(len).collect()}")data = [(1, "A"), (1, "B"), (1, "C"), (2, "D"), (3, "E")]
 
 
 Interview Questions
