@@ -67,13 +67,34 @@ What are RDDs in Apache Spark, and how do they differ from DataFrames?
 Answer: RDD (Resilient Distributed Dataset) is the fundamental data structure in Spark, representing an immutable, distributed collection of objects. DataFrames provide higher-level abstraction, are optimized via Catalyst and Tungsten engines, and are preferred for SQL-style queries and transformations due to their performance benefits.
 
 
+
+What is Data Skew in PySpark & how will you handle it ?
+-----------------------------------------------------
+Assuem there is 10m record dataset with data skew and how will you handle it
+from pyspark.sql.functions import col
+
+# Sample DataFrame with skewed data
+data = [(1, "A"), (1, "B"), (1, "C"), (2, "D"), (3, "E")]
+df_skewed = spark.createDataFrame(data, ["key", "value"])
+
+# Calculate distribution to detect skewness
+df_skewed.groupBy("key").count().orderBy(col("count").desc()).show()
+
+# Repartition by range to manage skewness
+df_balanced = df_skewed.repartitionByRange(3, "key")
+print(f"Partitioning after repartitionByRange: {df_balanced.rdd.glom().map(len).collect()}")data = [(1, "A"), (1, "B"), (1, "C"), (2, "D"), (3, "E")]
+
+
 Interview Questions
 --------------------
 https://datavidhya.com/blog/data-engineering-interview-questions/
 
+https://www.tryexponent.com/blog/top-data-engineering-interview-questions
+
 Kafka
 -----
 https://www.datacamp.com/blog/kafka-interview-questions
+
 https://www.geeksforgeeks.org/apache-kafka/kafka-interview-questions/
 
 
