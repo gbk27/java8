@@ -70,7 +70,36 @@ Answer: RDD (Resilient Distributed Dataset) is the fundamental data structure in
 
 What is Data Skew in PySpark & how will you handle it ?
 -----------------------------------------------------
-Assuem there is 10m record dataset with data skew and how will you handle it
+Assuem there is 10m record dataset with data skew and how will you handle it. 
+Assume that this dataset has been unevenly partiotioned, then in this case what will be the problems in data processing & how do you solve it ?
+
+Imagine an e-commerce platform processing a massive sales dataset. A dominant retailer account (e.g., ID 101) has millions of transactions, whereas individual consumers only have a few transactions each
+
+    from pyspark.sql import SparkSession
+    import pyspark.sql.functions as F
+    
+    spark = SparkSession.builder.appName("DataSkewExample").getOrCreate()
+    
+    # Simulated skewed data: 80% of rows contain the product ID 101
+    skewed_data = [
+        (101, "Mouse"), (101, "Mouse"), (101, "Mouse"), (101, "Mouse"),
+        (101, "Mouse"), (101, "Mouse"), (101, "Mouse"), (101, "Mouse"),
+        (102, "Laptop"), (103, "Phone"), (104, "Tablet")
+    ]
+    
+    df = spark.createDataFrame(skewed_data, ["product_id", "product_name"])
+    
+    # Forcing a shuffle via repartition to simulate the problem
+    df_shuffled = df.repartition("product_id")
+    
+    # View how the rows are divided across partitions
+    df_shuffled.withColumn("partition_id", F.spark_partition_id()) \
+               .groupBy("partition_id") \
+               .count() \
+               .show()
+
+
+
     from pyspark.sql.functions import col
     
     # Sample DataFrame with skewed data
