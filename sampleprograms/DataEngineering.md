@@ -67,6 +67,8 @@ What are RDDs in Apache Spark, and how do they differ from DataFrames?
 Answer: RDD (Resilient Distributed Dataset) is the fundamental data structure in Spark, representing an immutable, distributed collection of objects. DataFrames provide higher-level abstraction, are optimized via Catalyst and Tungsten engines, and are preferred for SQL-style queries and transformations due to their performance benefits.
 
 
+Interview Questions
+--------------------
 https://datavidhya.com/blog/data-engineering-interview-questions/
 
 
