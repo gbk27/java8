@@ -74,6 +74,7 @@ https://datavidhya.com/blog/data-engineering-interview-questions/
 Kafka
 -----
 https://www.datacamp.com/blog/kafka-interview-questions
+https://www.geeksforgeeks.org/apache-kafka/kafka-interview-questions/
 
 
 
