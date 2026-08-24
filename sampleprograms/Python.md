@@ -34,3 +34,19 @@
         Tuple consumes less memory as compared to the list
         A Tuple data type is appropriate for accessing the elements
         The implication of iterations is comparatively Faster
+
+* Calculate the length of each individual word across a list of sentences and return them in a single, flattened list.
+    
+    * lst = ["roses are red","sky is blue"] output= [5,3,3,3,2,4]
+    * lst = ["roses are red", "sky is blue"]
+
+            # Solution 1: Clean list comprehension
+            output = [len(word) for sentence in lst for word in sentence.split()]
+            print(output)  # Output: [5, 3, 3, 3, 2, 4]
+            
+            # Solution 2: Standard for-loop
+            output = []
+            for sentence in lst:
+                for word in sentence.split():
+                    output.append(len(word))
+
