@@ -113,4 +113,38 @@ SELECT * FROM Employee WHERE sal =
     * Write a query to find how many orders each customers have places
       
           SELECT count(order_id), customer_id FROM orders GROUP BY customer_id
+
+5. Query
+   -----
+Write a query to display the seat which is not occupied and next 2 seats are also vacant
+
+    SEAT_NO  OCCUPIED
+    1			Y
+    2			N
+    3			N
+    4			N
+    5			Y
+    6			N
+    7			Y
+    8			N
+    9			N
+    10 			N
+    Output:
+    2
+    8
+
+
+    SELECT seat_no
+    FROM (
+        SELECT seat_no,
+               occupied,
+               LEAD(occupied, 1) OVER (ORDER BY seat_no) AS next_seat_1,
+               LEAD(occupied, 2) OVER (ORDER BY seat_no) AS next_seat_2
+        FROM seats
+    ) t
+    WHERE occupied = 'N' 
+      AND next_seat_1 = 'N' 
+      AND next_seat_2 = 'N';
+
+   
         
